@@ -1,0 +1,18 @@
+function pairElement(str) {
+  const input=[...str] //spreads the input and store it in array 
+  const soln=input.map(pre=>{
+    if(pre==='C'){
+      return [pre,'G']
+    }else if(pre==='G'){
+      return [pre,'C']
+    }else if(pre ==='A'){
+      return [pre,'T']
+    }else{
+      return [pre,'A']
+    }
+  })
+  //console.log(input)
+  return soln;
+}
+
+console.log(pairElement("GCG"));

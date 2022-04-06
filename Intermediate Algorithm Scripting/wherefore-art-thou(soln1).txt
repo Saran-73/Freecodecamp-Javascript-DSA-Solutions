@@ -1,0 +1,28 @@
+function whatIsInAName(collection, source) {
+  const arr = [];
+  // Only change code below this line
+//look for the presence of prop&val in collection and store the boolean result in newArr1
+ const newArr1=[]; 
+  for(let i=0;i<collection.length;i++){
+for(let key in source){
+newArr1.push(collection[i].hasOwnProperty(key)&&source[key]===collection[i][key])
+}
+} 
+//combine .no of results to make new Array of booleans  and push it to newArr2
+const newArr2=[]; 
+for(let j=newArr1.length-1;j>=0;j--){
+if(newArr1[j]){
+newArr2.push(newArr1.splice(0,Object.keys(source).length))
+}
+} 
+//check for the presence of true in 2nd dimension of the newArr2 using every and push the related object in collection  to arr
+for(let x=0;x<newArr2.length;x++){ 
+  if(newArr2[x].every(boolean=>boolean===true)){
+  arr.push(collection[x])
+  } 
+  }
+  // Only change code above this line 
+  return arr;
+}
+
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));

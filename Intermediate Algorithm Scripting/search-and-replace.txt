@@ -1,0 +1,12 @@
+function myReplace(str, before, after) {
+
+  if(before.charAt(0)===before.charAt(0).toLowerCase()){
+   return str.replace(before, after.toLowerCase())
+}else{
+  const [a,...b]= after.split('')
+  return str.replace(before,[a.toUpperCase(),...b].join(''))
+}
+  
+}
+
+console.log(myReplace("A quick brown fox lumped over the lazy dog", "jumped", "leaped"));

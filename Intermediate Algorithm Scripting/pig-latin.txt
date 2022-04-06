@@ -1,0 +1,15 @@
+function translatePigLatin(str) {
+  let soln=str;
+//use regex check if first char is a consonant 
+   const consonant=str.match(/^[^aeiou]+/g);
+   const test=/^[^aeiou]+/g.test(str)
+   //if its replace it with empty str and concatinate ay and matched consonant
+// if its vowel just concatinate way
+//use regex
+
+soln= test ? soln.replace(consonant,'')+consonant+'ay':soln=soln+'way';
+   return soln;
+   }
+
+console.log(translatePigLatin("california"));
+

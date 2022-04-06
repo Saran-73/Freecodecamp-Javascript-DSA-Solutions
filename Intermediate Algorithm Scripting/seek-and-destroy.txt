@@ -1,0 +1,5 @@
+function destroyer(...arr) {
+  return  arr[0].filter(x=>!arr.slice(1).includes(x)); 
+}  //! makes a true to false & vice versa
+
+console.log(destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan"));

@@ -1,0 +1,15 @@
+function whatIsInAName(collection, source) {
+  //const arr = [];
+  // Only change code below this line
+  const srk=Object.keys(source); //creates an array of props from the source
+  return collection.filter(obj=>{
+    return srk.every(element=>{
+      return obj.hasOwnProperty(element)&&source[element]===obj[element];
+    })
+  })
+  // Only change code above this line
+  //return arr;
+}
+
+console.log(whatIsInAName([{"a": 1, "b": 2, "c": 3}], {"a": 1, "b": 9999, "c": 3}));
+

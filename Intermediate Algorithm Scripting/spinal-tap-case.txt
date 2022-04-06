@@ -1,0 +1,24 @@
+function spinalCase(str) {
+const arr=[];
+// split str into characters
+// loop to find out Capital letters
+// if its capital unshift empty string before it 
+const letters=str.replace(/[_]/g,'-').replace(/\W/g,'-').split('');
+for(let i=0;i<letters.length;i++){
+  // if the element is capital look for space before it and 
+  //look for 1 element before the cap if any element exist add ' ' b\w if not do nothing
+  if(letters[i]===letters[i].toUpperCase()){
+    if(letters[i-2]){
+       arr.push('-')
+    }
+    arr.push(letters[i])
+  }else{
+    arr.push(letters[i])
+  }
+}
+  return arr.join('').toLowerCase().replace(/[-]+/g,'-')
+}
+
+console.log(spinalCase("This Is Spinal Tap"));
+
+ 

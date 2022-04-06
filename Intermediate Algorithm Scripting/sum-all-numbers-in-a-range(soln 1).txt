@@ -1,0 +1,17 @@
+function sumAll(arr) {
+  let newArr=[];    // create new arr to store the in b/w values 
+  if(arr[0]<arr[1]){
+  for(let i=arr[0]+1;i<arr[1];i++){
+    newArr.push(i);
+  }
+  }else if(arr[1]<arr[0]){
+     for(let i=arr[1]+1;i<arr[0];i++){
+    newArr.push(i);
+  }
+  };
+  return newArr.concat(arr).reduce((x,y)=>{  // concat newarr and arr then add the elements using reduce
+  return x+y;                          
+  },0);
+}
+
+console.log(sumAll([4, 1]))
