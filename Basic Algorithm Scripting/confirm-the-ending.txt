@@ -1,0 +1,24 @@
+function confirmEnding(str, target) {
+let strsp=str.split('').reverse();
+//console.log(strsp)
+let trsp=target.split('').reverse();
+//console.log(trsp)
+let trlen=target.length;
+
+let strl='',tr='';
+for(let i=0;i<trlen;i++){
+ strl+=strsp[i];
+  tr+=trsp[i];
+}
+console.log(strl)
+console.log(tr)
+
+ if(strl===tr){
+   return true;
+ }
+
+
+   return false;
+ 
+}
+confirmEnding("Bastian", "an");

@@ -1,0 +1,8 @@
+function frankenSplice(arr1, arr2, n) {
+  let val=[...arr2];
+      val.splice(n,0,...arr1);
+console.log(val)
+  return val;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);

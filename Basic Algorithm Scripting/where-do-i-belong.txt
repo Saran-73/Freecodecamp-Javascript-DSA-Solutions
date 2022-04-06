@@ -1,0 +1,8 @@
+function getIndexToIns(arr, num) {
+arr.push(num);
+arr.sort(function(a,b){return a-b});
+let val=arr.indexOf(num);
+console.log(val)
+  return val;
+}
+getIndexToIns([2, 20, 10], 19);
