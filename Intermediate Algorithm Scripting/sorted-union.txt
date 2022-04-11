@@ -8,7 +8,7 @@ for(let i=0;i<oneArr.length;i++){
 if(resultArr.includes(oneArr[i])===false){
        resultArr.push(oneArr[i])
   }}
-return resultArr
+return resultArr;
 }
 
 console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]));
