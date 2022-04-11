@@ -1,0 +1,14 @@
+function uniteUnique(...arr) {
+let resultArr=[]
+//concatinate all the nested arrays and make a single array
+// o/p [ 1, 2, 3, 5, 2, 1, 4, 2, 1, 6, 7, 8 ]
+const oneArr=arr.reduce((x,array)=>x.concat(array),[])
+//take an element in oneArr if its not present in resultArr then push it to resultArr
+for(let i=0;i<oneArr.length;i++){
+if(resultArr.includes(oneArr[i])===false){
+       resultArr.push(oneArr[i])
+  }}
+return resultArr
+}
+
+console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]));
