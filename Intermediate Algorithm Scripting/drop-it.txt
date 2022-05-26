@@ -1,0 +1,12 @@
+function dropElements(arr, func) {
+  const ARRAY = arr;
+  const CONDITION = func;
+
+  for(let i=0 ; i<ARRAY.length ; i++){
+   if(CONDITION(ARRAY[i])) return ARRAY.slice(i)
+  }
+  
+  return [];
+}
+
+dropElements([1, 2, 3], function(n) {return n < 3; });
