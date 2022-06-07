@@ -1,0 +1,29 @@
+function binaryAgent(str) {
+ const STR = str;
+// conversion of unicode to character
+ const ARR = STR.split(' ').map(binary =>{
+   let unicode = bi_num(binary);
+   return String.fromCharCode(unicode);
+ })
+// conversion of binary to unicode
+ function bi_num(bi){
+  const BINARY = bi;
+  const BIT =[128 ,64, 32 ,16 ,8 ,4, 2 ,1];
+
+  const UNICODE = BINARY.split('').reduce((sum, x, i)=>{
+     if(x === '1') {
+      return sum + BIT[i]
+     }else {
+       return sum
+     }
+  },0);
+
+  return UNICODE;
+ }
+
+  return ARR.join('');
+}
+
+
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+

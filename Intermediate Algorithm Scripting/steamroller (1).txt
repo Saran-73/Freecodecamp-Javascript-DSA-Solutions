@@ -1,0 +1,27 @@
+function steamrollArray(arr) {
+  const ARR =arr;
+  let result =[];
+
+  for(let i=0; i< ARR.length ;i++){
+    if(Array.isArray(ARR[i])){
+      checkDeep(ARR[i])
+    }else{
+      result.push(ARR[i])
+    }
+  }
+
+  function checkDeep(x){
+    let currentArr = x;
+  for(let i=0; i< currentArr.length ;i++){
+    if(Array.isArray(currentArr[i])){
+      checkDeep(currentArr[i])
+    }else{
+      result.push(currentArr[i])
+    }
+  }
+  }
+
+  return result;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
