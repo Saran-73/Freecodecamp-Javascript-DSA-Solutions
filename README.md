@@ -1,4 +1,4 @@
 # Freecodecamp-Javascript-DSA-Solutions
- My solution to freecodecamp Javascript Data Structures and Algorithm Challenges
+ My solution's to freecodecamp Javascript Data Structures and Algorithm Challenges
  
  
