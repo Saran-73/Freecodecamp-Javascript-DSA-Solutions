@@ -1,0 +1,20 @@
+function sumPrimes(num) {
+ let total=0;
+ const isFactor = (i,x)=> i%x === 0;
+ 
+ for(let i=2; i<=num; i++){
+    let allFactor =[];
+    for(let k=1; k<=i;k++){
+      if(isFactor(i,k)){
+        allFactor.push(k)
+      }
+    }
+    if(allFactor.length === 2){
+        total = total + i;
+    }
+ }
+ 
+  return total ;
+}
+
+sumPrimes(10);
