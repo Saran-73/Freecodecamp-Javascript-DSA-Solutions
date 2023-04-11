@@ -1,0 +1,34 @@
+// check isDivisible
+const isDivisible = (x,y) => x%y === 0;
+
+// calculate gcd
+const CalcGcd =(a,b)=>{
+  let min = Math.min(a,b);
+  let gcd;
+  for(let i=1; i<=min;i++){
+    if(isDivisible(a,i) && isDivisible(b,i)){
+      gcd = i;
+    }
+  }
+return gcd;
+}
+
+// calculate lcm 
+const CalcLcm = (a,b)=>((a*b)/CalcGcd(a,b));
+
+function smallestCommons(arr) {
+ let result;
+ let minNum = Math.min(...arr);
+ let maxNum = Math.max(...arr);
+
+ result = CalcLcm(minNum, minNum + 1);
+
+for(let i = (minNum + 2); i<= maxNum; i++){
+  result = CalcLcm(result, i);
+}
+
+  return result;
+}
+
+smallestCommons([2,4]);
+
